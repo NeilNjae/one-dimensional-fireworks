@@ -20,7 +20,7 @@ def explode(pixels):
         pixels[NP_COUNT - BURST_SIZE + i] = initial_colour
         pixels[NP_COUNT - BURST_SIZE - i] = initial_colour
     pixels.show()
-    time.sleep(0.5)
+    sleep(500)
 # End of function to add
 #########################################
 
