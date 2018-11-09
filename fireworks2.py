@@ -24,7 +24,6 @@ def shoot_firework(pixels):
         sleep(20)
         pixels[pixel] = OFF
         pixels.show()
-    
 
 reset(np)
 last_gesture = accelerometer.current_gesture() # Add this line
