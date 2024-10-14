@@ -44,28 +44,28 @@ Pressing the button is OK, but let's make the firework launch after a short dela
 
 Make the changes indicated to your program. You don't need to type the '# Add this line' comments: that's just to show you what to do.
 
-> [Program 2](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks2.py)
+> [Program 2](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main2.py)
 
 Again, save the program on the Pi Pico as `main.py`. Now leave the button alone and see if it makes the firework launch by itself.
 
 # Program 3: Exploding fireworks
 Now to make the firework explode at the top!
 
-> [Program 3](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks3.py)
+> [Program 3](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main3.py)
 
 Again, save and flash your program. You should now have explosions!
 
 # Program 4
 What you've got is OK, but let's add some animation to the explosion. Let's make it start small and rapidly grow, and then fade over a bit of time.
 
-> [Program 4](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks4.py)
+> [Program 4](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main4.py)
 
 Again, save and flash the program. Cool animation!
 
 # Program 5: different colour explosions
 Always having the same colour explosion is a bit boring. Let's make every explosion a different colour.
 
-> [Program 5](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks5.py)
+> [Program 5](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main5.py)
 
 Again, save and flash the program. Even cooler animation!
 
@@ -74,16 +74,16 @@ When real fireworks explode, the outer edge of the explosion is bright and the c
 
 The animation's a bit slow. We can speed things up by only updating the pixels that change, rather than all of them.
 
-> [Program 6](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks6.py)
+> [Program 6](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main6.py)
 
 # Program 7: Explorer display
 The Explorer has a small display. Let's use that to show a countdown.
 
-> [Program 7](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks7.py)
+> [Program 7](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main7.py)
 
 # Program 8: Annoying sound
 The Explorer has a small piezo-electric buzzer. We can use that to make an annoying sound when the firework goes off.
 
 On the Explorer board, put a jumper between the "Audio" pin and GPIO pin 5.
 
-> [Program 8](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks8.py)
+> [Program 8](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main8.py)
