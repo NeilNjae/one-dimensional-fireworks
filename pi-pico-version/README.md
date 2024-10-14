@@ -72,7 +72,9 @@ Again, save and flash the program. Even cooler animation!
 # Program 6: speeding up the animation
 When real fireworks explode, the outer edge of the explosion is bright and the centre gets dimmer. Let's change the animation to do that. 
 
-The animation's a bit slow. We can speed things up by only updating the pixels that change, rather than all of them.
+The animation's a bit slow. We can speed things up by only updating the pixels that change, rather than all of them. But when we do, the animation's too fast! 
+
+We need to add an explicit delay in the "fading" loop so we can see the animation. Experiment with adjusting the value of `time.sleep`, and the number of fading steps, to have an animation that looks good. (But don't spend so long that you can't do the next steps.)
 
 > [Program 6](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/pi-pico-version/main6.py)
 

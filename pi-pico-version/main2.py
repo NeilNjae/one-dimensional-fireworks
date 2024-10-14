@@ -7,11 +7,11 @@ from pimoroni import Button
 NEOPIXEL_DATA_PIN = 0
 NEOPIXEL_LENGTH = 60
 
-BURST_SIZE = 10
 
 np = Neopixel(NEOPIXEL_LENGTH, 0, NEOPIXEL_DATA_PIN, "GRBW")
-
 button_y = Button(15)
+
+BURST_SIZE = 10
 
 BLUE = (0, 0, 64, 0)
 RED = (64, 0, 0, 0)

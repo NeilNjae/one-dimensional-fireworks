@@ -7,11 +7,10 @@ from pimoroni import Button
 NEOPIXEL_DATA_PIN = 0
 NEOPIXEL_LENGTH = 60
 
-BURST_SIZE = 10
-
 np = Neopixel(NEOPIXEL_LENGTH, 0, NEOPIXEL_DATA_PIN, "GRBW")
-
 button_y = Button(15)
+
+BURST_SIZE = 10
 
 BLUE = (0, 0, 64, 0)
 RED = (64, 0, 0, 0)
@@ -47,7 +46,7 @@ def explode():
 
 reset()
 
-delay_timer = 100 # Add this line
+delay_timer = 100
 
 while True:
     if button_y.raw() or delay_timer <= 0:

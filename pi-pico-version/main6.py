@@ -7,11 +7,10 @@ from pimoroni import Button
 NEOPIXEL_DATA_PIN = 0
 NEOPIXEL_LENGTH = 60
 
-BURST_SIZE = 10
-
 np = Neopixel(NEOPIXEL_LENGTH, 0, NEOPIXEL_DATA_PIN, "GRBW")
-
 button_y = Button(15)
+
+BURST_SIZE = 10
 
 BLUE = (0, 0, 64, 0)
 RED = (64, 0, 0, 0)
@@ -22,7 +21,7 @@ FIREWORK_COLOURS = [ (255, 128, 128, 0), (128, 255, 128, 0), (128, 128, 255, 0)
                    ]
 
 def fade_all(first=0, last=NEOPIXEL_LENGTH, fade_by=0.9): # Change this line
-    for i in range(NEOPIXEL_LENGTH):
+    for i in range(first, last):  # Change this line
         fade(i, fade_by=fade_by)
     np.show()
         
@@ -47,7 +46,7 @@ def shoot_firework():
         np.show()
 
 def explode():    
-    initial_colour = random.choice(FIREWORK_COLOURS) # Change this line
+    initial_colour = random.choice(FIREWORK_COLOURS)
         
     for i in range(BURST_SIZE):
         np.set_pixel(NEOPIXEL_LENGTH - BURST_SIZE + i, initial_colour)
@@ -60,10 +59,11 @@ def explode():
     for _ in range(30):
         fade_all(first=(NEOPIXEL_LENGTH - 2 * BURST_SIZE), # Change this line
                  fade_by=0.8 )                             # Change this line
+        time.sleep(0.1)                                    # Add this line
 
 reset()
 
-delay_timer = 100 # Add this line
+delay_timer = 100
 
 while True:
     if button_y.raw() or delay_timer <= 0:
