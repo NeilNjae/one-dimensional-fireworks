@@ -46,7 +46,7 @@ Make the changes indicated to your program. You don't need to type the '# Add th
 
 > [Program 2](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks2.py)
 
-Again, save and flash the program. Now leave the button alone and see if it makes the firework launch by itself.
+Again, save the program on the Pi Pico as `main.py`. Now leave the button alone and see if it makes the firework launch by itself.
 
 # Program 3: Exploding fireworks
 Now to make the firework explode at the top!
@@ -76,7 +76,14 @@ The animation's a bit slow. We can speed things up by only updating the pixels t
 
 > [Program 6](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks6.py)
 
-# Program 7: Microbit display
+# Program 7: Explorer display
 The Explorer has a small display. Let's use that to show a countdown.
 
 > [Program 7](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks7.py)
+
+# Program 8: Annoying sound
+The Explorer has a small piezo-electric buzzer. We can use that to make an annoying sound when the firework goes off.
+
+On the Explorer board, put a jumper between the "Audio" pin and GPIO pin 5.
+
+> [Program 8](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks8.py)

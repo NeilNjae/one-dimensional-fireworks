@@ -2,8 +2,8 @@ from neopixel import Neopixel
 from machine import Pin
 import time
 import random
-from pimoroni import Button
-from picographics import PicoGraphics, DISPLAY_PICO_EXPLORER # Add this line
+from pimoroni import Button, Buzzer                           # Change this line
+from picographics import PicoGraphics, DISPLAY_PICO_EXPLORER
 
 NEOPIXEL_DATA_PIN = 0
 NEOPIXEL_LENGTH = 60
@@ -13,7 +13,8 @@ BURST_SIZE = 10
 np = Neopixel(NEOPIXEL_LENGTH, 0, NEOPIXEL_DATA_PIN, "GRBW")
 
 button_y = Button(15)
-display = PicoGraphics(display=DISPLAY_PICO_EXPLORER) # Add this line
+buzzer = Buzzer(5)                                    # Add this line
+display = PicoGraphics(display=DISPLAY_PICO_EXPLORER)
 WHITE_PEN = display.create_pen(255, 255, 255)
 BLACK_PEN = display.create_pen(0, 0, 0)
 RED_PEN = display.create_pen(255, 63, 63)
@@ -41,13 +42,14 @@ def fade(n, fade_by=0.9):
                   int(b * fade_by), int(w * fade_by)))
 
 def reset():
+    buzzer.set_tone(0)                      # Add this line
     for n in range(NEOPIXEL_LENGTH):
         np.set_pixel(n, OFF)
     np.set_pixel(0, BLUE)
     np.show()
 
 def shoot_firework():
-    display.set_pen(BLACK_PEN) # Add these display lines
+    display.set_pen(BLACK_PEN)
     display.clear()
     display.set_pen(RED_PEN)
     display.text("Fire!", 0, 100, scale=4)
@@ -60,8 +62,11 @@ def shoot_firework():
         np.show()
 
 def explode():    
-    initial_colour = random.choice(FIREWORK_COLOURS) # Change this line
-        
+    initial_colour = random.choice(FIREWORK_COLOURS) 
+    
+    buzzer_tone = 40                    # Add this line
+    buzzer.set_tone(buzzer_tone)        # Add this line
+    
     for i in range(BURST_SIZE):
         np.set_pixel(NEOPIXEL_LENGTH - BURST_SIZE + i, initial_colour)
         np.set_pixel(NEOPIXEL_LENGTH - BURST_SIZE - i, initial_colour)
@@ -70,9 +75,14 @@ def explode():
                 , last= (NEOPIXEL_LENGTH - BURST_SIZE + i)
                 )
 
+        buzzer_tone += 500              # Add this line
+        buzzer.set_tone(buzzer_tone)    # Add this line
+
     for _ in range(30):
         fade_all(first=(NEOPIXEL_LENGTH - 2 * BURST_SIZE),
                  fade_by=0.8)
+        buzzer_tone -= 2                # Add this line
+        buzzer.set_tone(buzzer_tone)    # Add this line
 
 reset()
 
@@ -87,7 +97,7 @@ while True:
         delay_timer = random.randint(50, 100) 
     else:
         delay_timer -= 1
-        display.set_pen(BLACK_PEN)  # Add these display lines
+        display.set_pen(BLACK_PEN) 
         display.clear()
         display.set_pen(WHITE_PEN)
         display.text(str(int(delay_timer / 10.0 + 0.5)), 40, 100, scale=5)

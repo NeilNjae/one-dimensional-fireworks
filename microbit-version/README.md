@@ -20,7 +20,7 @@ Note that Python is really picky about
 * colons at the end of some lines
 * the difference between zero and oh, and one and ell.
 
-> [Program 1](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks1.py)
+> [Program 1](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks1.py)
 
 When you've typed it in, press "Save" button to save your file then press the "Flash" button to put the program on the Microbit.
 
@@ -31,42 +31,42 @@ Pressing the button is OK, but let's make the firework launch if you shake the M
 
 Make the changes indicated to your program. You don't need to type the '# Add this line' comments: that's just to show you what to do.
 
-> [Program 2](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks2.py)
+> [Program 2](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks2.py)
 
 Again, save and flash the program. Now try shaking the Microbit and see if it launches a firework.
 
 # Program 3: Exploding fireworks
 Now to make the firework explode at the top!
 
-> [Program 3](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks3.py)
+> [Program 3](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks3.py)
 
 Again, save and flash your program. You should now have explosions!
 
 # Program 4
 What you've got is OK, but let's add some animation to the explosion. Let's make it start small and rapidly grow, and then fade over a bit of time.
 
-> [Program 4](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks4.py)
+> [Program 4](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks4.py)
 
 Again, save and flash the program. Cool animation!
 
 # Program 5: different colour explosions
 Always having the same colour explosion is a bit boring. Let's make every explosion a different colour.
 
-> [Program 5](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks5.py)
+> [Program 5](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks5.py)
 
 Again, save and flash the program. Even cooler animation!
 
 # Program 6: speeding up the animation
 The animation's a bit slow. We can speed things up by only updating the pixels that change, rather than all of them.
 
-> [Program 6](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks6.py)
+> [Program 6](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks6.py)
 
 # Program 7: Microbit display
 The Microbit has a small display. Let's use that to show the firework is ready.
 
-> [Program 7](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks7.py)
+> [Program 7](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks7.py)
 
 # Program 8: Radio control
 The Micro:bit has a radio. Let's use that to make one firework (sometimes) set off another firework.
 
-> [Program 8](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/fireworks8.py)
+> [Program 8](https://github.com/NeilNjae/one-dimensional-fireworks/blob/master/microbit-version/fireworks8.py)

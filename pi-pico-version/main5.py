@@ -18,8 +18,8 @@ RED = (64, 0, 0, 0)
 OFF = (0, 0, 0, 0)
 
 # Add this block
-FIREWORK_COLOURS = [ (255, 128, 128), (128, 255, 128), (128, 128, 255)
-                   , (255, 255, 128), (255, 128, 255), (128, 255, 255)
+FIREWORK_COLOURS = [ (255, 128, 128, 0), (128, 255, 128, 0), (128, 128, 255, 0)
+                   , (255, 255, 128, 0), (255, 128, 255, 0), (128, 255, 255, 0)
                    ]
 
 def fade_all(fade_by=0.9):
@@ -65,7 +65,7 @@ while True:
     if button_y.raw() or delay_timer <= 0:
         # set off a firework
         shoot_firework()
-        explode()             # Add this line
+        explode()
         reset()
         delay_timer = random.randint(50, 100) 
     else:

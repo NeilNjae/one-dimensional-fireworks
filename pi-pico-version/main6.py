@@ -17,8 +17,8 @@ BLUE = (0, 0, 64, 0)
 RED = (64, 0, 0, 0)
 OFF = (0, 0, 0, 0)
 
-FIREWORK_COLOURS = [ (255, 128, 128), (128, 255, 128), (128, 128, 255)
-                   , (255, 255, 128), (255, 128, 255), (128, 255, 255)
+FIREWORK_COLOURS = [ (255, 128, 128, 0), (128, 255, 128, 0), (128, 128, 255, 0)
+                   , (255, 255, 128, 0), (255, 128, 255, 0), (128, 255, 255, 0)
                    ]
 
 def fade_all(first=0, last=NEOPIXEL_LENGTH, fade_by=0.9): # Change this line
@@ -52,13 +52,14 @@ def explode():
     for i in range(BURST_SIZE):
         np.set_pixel(NEOPIXEL_LENGTH - BURST_SIZE + i, initial_colour)
         np.set_pixel(NEOPIXEL_LENGTH - BURST_SIZE - i, initial_colour)
-        fade_all( fade_by=0.95              # Add this line
+        fade_all( fade_by=0.9,               # Add this line
                 , first=(NEOPIXEL_LENGTH - BURST_SIZE - i) # Add this line
                 , last= (NEOPIXEL_LENGTH - BURST_SIZE + i) # Add this line
                 )                           # Add this line
 
     for _ in range(30):
-        fade_all(first=(NEOPIXEL_LENGTH - 2 * BURST_SIZE)) # Change this line
+        fade_all(first=(NEOPIXEL_LENGTH - 2 * BURST_SIZE), # Change this line
+                 fade_by=0.8 )                             # Change this line
 
 reset()
 
@@ -68,7 +69,7 @@ while True:
     if button_y.raw() or delay_timer <= 0:
         # set off a firework
         shoot_firework()
-        explode()             # Add this line
+        explode()
         reset()
         delay_timer = random.randint(50, 100) 
     else:

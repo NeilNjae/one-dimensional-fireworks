@@ -65,7 +65,7 @@ while True:
     if button_y.raw() or delay_timer <= 0:
         # set off a firework
         shoot_firework()
-        explode()             # Add this line
+        explode() 
         reset()
         delay_timer = random.randint(50, 100) 
     else:
